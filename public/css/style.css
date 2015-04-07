@@ -14,7 +14,9 @@ button {
   cursor: pointer;
   outline: none; }
   button.active {
-    background: gainsboro; }
+    background: #09c;
+    color: #fff;
+    border: 1px solid #09c; }
 
 .border-on-hover {
   border: 5px solid #333;

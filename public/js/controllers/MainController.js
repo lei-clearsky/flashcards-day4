@@ -10,6 +10,7 @@ app.controller('MainController', function ($scope, $http, FlashCardsFactory) {
     ];
 
     $scope.loader = true;
+    $scope.card = {};
 
     $scope.chosenCategory = 'All';
 
@@ -41,7 +42,8 @@ app.controller('MainController', function ($scope, $http, FlashCardsFactory) {
         // answers.push({});
 
         FlashCardsFactory.addCard(card).then(function (card) {
-            console.log(card);
+            $scope.getAllCards();
+            $scope.card = {};
         });
     };
     // $scope.addCard = function (card) {

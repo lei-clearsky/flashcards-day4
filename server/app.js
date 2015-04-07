@@ -37,9 +37,10 @@ app.post('/cards', function (req, res, next) {
     // Reference schema for what is expected as the POST body.
     console.log("In server", req.body);
     var cardData = req.body.data;
+    console.log('data from server', cardData)
 
-    FlashCardModel.create(cardData).then(function (err, card) {
-        if (err) return next(err);
+    FlashCardModel.create(cardData).then(function (card) {
+        //if (err) return next(err);
         res.json(card);
     });
 

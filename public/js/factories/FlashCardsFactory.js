@@ -50,7 +50,6 @@ app.factory('FlashCardsFactory', function ($http) {
 
                     }
 
-
                 }
 
                 card['answers'] = answers;
@@ -58,12 +57,11 @@ app.factory('FlashCardsFactory', function ($http) {
                 
                 //$scope.flashCardForm.$setPristine();
                 
-
             }
             return $http.post('/cards', {
                     data: card
                 }).then(function(response) {
-                    card = null;
+                    //card = null; //wanted to reset card but don't know how
                     return response.data;
                 });
         }
