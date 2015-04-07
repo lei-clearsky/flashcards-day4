@@ -1,0 +1,49 @@
+<form name="flashCardForm" class="flash-card-form">
+	<h1>Add New Card</h1>
+	<div class="form-group">
+		<label for="question" class="left-col">Question: </label>
+	  	<input name="question" class="right-col" ng-model="card.question" required>
+  	</div>
+
+	<div class="form-group">
+		<label for="category" class="left-col">Category: </label>  	
+		<input name="category" class="right-col" ng-model="card.category" required>
+	</div>
+
+	<div class="form-group">
+		<label for="firstAnswer" class="left-col">First Answer: </label>
+		<input name="answer1" class="right-col" ng-model="card.answers[0]" required>
+	</div>
+
+	<div class="form-group">
+<!-- 		<label class="offset-left-col">Correct?: 
+		<input type="radio" ng-model="card.answer1.correct"></label> -->
+		<label class="offset-left-col">Correct?: 
+		<input type="checkbox" ng-model="card.correct[0]"></label>
+	</div>
+  
+	<div class="form-group">
+		<label for="secondAnswer" class="left-col">Second Answer: </label>
+		<input name="answer2" class="right-col" ng-model="card.answers[1]" required>
+	</div>
+
+	<div class="form-group">
+		<label class="offset-left-col">Correct?: 
+		<input type="checkbox" ng-model="card.correct[1]"></label>
+	</div>
+
+	<div class="form-group">
+		<label for="thirdAnswer" class="left-col">Third Answer: </label>
+		<input name="answer3" class="right-col" ng-model="card.answers[2]" required>
+	</div>
+	<div class="form-group">
+		<label class="offset-left-col">Correct?:
+		<input type="checkbox" ng-model="card.correct[2]"></label>
+	</div>
+
+	<!-- <span class="error" ng-show="myForm.input.$error.required">Required!</span><br> -->
+
+<!-- 	<input type="submit" class="btn" ng-click="addCard(card)" value="Save" /> -->
+	<button type="submit" class="btn" ng-click="addCard(card)" />Add New Card</button>
+
+ </form>
